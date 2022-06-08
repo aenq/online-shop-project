@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Tobacco Shop</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}" type="text/css">
+  
+      <!-- Bootstrap -->
+      <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-5.0.2-dist/css/bootstrap.min.css')}}" type="text/css">
+      <script src="{{ url_for('static', filename='bootstrap-5.0.2-dist/js/bootstrap.min.js')}}" type="text/javascript"></script>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Tobacco Shop</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Beranda</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Produk
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Tembakau Jawa Barat</a></li>
+                  <li><a class="dropdown-item" href="#">Tembakau Aceh</a></li>
+                  <li><a class="dropdown-item" href="#">Tembakau Jawa Timur</a></li>
+                  <li><a class="dropdown-item" href="#">Tembakau Kalimantan</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Galeri</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Kontak</a>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Cari" aria-label="Cari">
+              <button class="btn btn-outline-success" type="submit">Cari</button>
+            </form>
+            <button type="button" class="btn btn-dark"> Masuk</button>
+          </div>
+        </div>
+      </nav>
+  </head>
+  
+
+<body>
+    <div class="daftar">
+        <h2>Buat Akun Untuk Order!</h2>
+        <!-- https://getbootstrap.com/docs/5.0/forms/overview/ -->
+        <form class="row g-3 needs-validation" method="POST" onsubmit="return validate()">
+            <div class="col-md-4">
+              <label for="validationCustom01" class="form-label">Nama Awal</label>
+              <input type="text" name="nama_awal" class="form-control" id="validationCustom01" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustom02" class="form-label">Nama Akhir</label>
+              <input type="text" name="nama_akhir" class="form-control" id="validationCustom02" required>
+              <div class="valid-feedback">
+                Bagus!
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustomUsername" class="form-label">Username</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                <input type="text" name="username" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                <div class="invalid-feedback">
+                  Silahkan pilih Username.
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="validationCustom03" class="form-label">Alamat Rinci</label>
+              <input type="text" name="alamat_rinci" class="form-control" id="validationCustom03" required>
+              <div class="invalid-feedback" value="Cimandala RT 1 RW 2">
+                Pastikan alamat sudah lengkap.
+              </div>
+            <div class="col-md-6">
+              <label for="validationCustom03" class="form-label">Kota</label>
+              <input type="text" name="kota" class="form-control" id="validationCustom03" required>
+              <div class="invalid-feedback" value="Bogor">
+                Masukkan kota yang valid.
+              </div>
+            </div>
+            <div class="col-md-3">
+              <label for="validationCustom04" class="form-label">Provinsi</label>
+              <select class="form-select" name="provinsi" id="validationCustom04" required>
+                <option selected disabled value="">Pilih</option>
+                <option>Jawa Barat</option>
+                <option>DKI Jakarta</option>
+              </select>
+              <div class="invalid-feedback">
+                Masukkan provinsi yang valid.
+            </div>
+            </div>
+            <div class="col-md-3">
+              <label for="validationCustom05" class="form-label">Kode Pos</label>
+              <input type="text" name="kodepos" class="form-control" id="validationCustom05" required>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email</label>
+              <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="contoh : nama@email.com">
+              <small id="emailHelp" class="form-text text-muted">Kami akan memastikan email anda aman.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Kata Sandi</label>
+              <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Kata sandi">
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                <label class="form-check-label" for="invalidCheck">
+                  Setujui syarat dan ketentuan.
+                </label>
+                <div class="invalid-feedback">
+                  Kamu harus setuju sebelum klik Kirim!
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <button class="btn btn-primary" type="submit">Buat akun!</button>
+            </div>
+          </form>
+    </div>
+
+</body>
+{% include "footer.html " %}

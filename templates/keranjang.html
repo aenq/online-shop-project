@@ -1,0 +1,50 @@
+{% include "header.html" %}
+
+
+<div class="container">
+    <div class="row align-items-start">
+      <div class="col">
+        <table class="table table-dark table-striped">
+            <thead>
+              <tr>
+                <th scope="col">No</th>
+                <th scope="col">Produk</th>
+                <th scope="col">Paket</th>
+                <th scope="col">Harga</th>
+                <th scope="col">Jumlah</th>
+                <th scope="col">Subtotal</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for baris in container %}
+              <tr>
+                <td>{{ baris[0] }}</td>
+                <td>{{ baris[1] }}</td>
+                <td>{{ baris[2] }}</td>
+                <td>{{ baris[3] }}</td>
+                <td>{{ baris[4] }}</td>
+                <td>{{ baris[5] }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+      </div>
+    </div>
+    <div class="row align-items-center">
+      <div class="col">
+        <button type="button" class="btn btn-success">Checkout sekarang!</button>
+      </div>
+      
+    </div>
+    
+  </div>
+
+<div class="keranjang">
+    
+    
+    
+
+</div>
+
+
+{% include "footer.html " %}

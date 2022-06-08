@@ -1,0 +1,51 @@
+{% include "header.html" %}
+
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Beranda</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Produk</li>
+    </ol>
+  </nav>
+
+<div class="isi-produk">
+    <h2>Tembakau</h2> <hr>
+    <p> Ada banyak jenis tembakau di Indonesia, oleh sebab itu kami kategorikan termbakau sebagai berikut. Anda dapat memilih opsi yang lebih spesifik dibagian Pilih Opsi.</p>
+
+    <div class="row justify-content-center">
+      <div class="col-4">
+        <div class="card satu" style="width: 20rem;">
+          <img src="../static/tembakau-original.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4> Tembakau Original </h4>
+            <p class="card-text"><h5>150k - 3500k </h5> <a href="{{ url_for('original')}}" class="btn btn-info">Pilih Opsi</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card dua" style="width: 20rem;">
+          <img src="../static/tembakau-rokok.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4> Tembakau Rokok </h4>
+            <p class="card-text"><h5>150k - 3500k </h5> <a href="#" class="btn btn-info">Pilih Opsi</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card tiga" style="width: 20rem;">
+          <img src="../static/tembakau-rasa.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4> Tembakau Rasa </h4>
+            <p class="card-text"><h5>150k - 3500k </h5> <a href="#" class="btn btn-info">Pilih Opsi</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+</div>
+
+
+
+<script src="../static/bootstrap-5.0.2-dist/js/bootstrap.js"></script>
+{% include "footer.html " %}

@@ -1,0 +1,172 @@
+body {
+    align-content: center;
+    text-align: center;
+}
+
+table { border-collapse: collapse; }
+tr:nth-child(0) { border: solid thin;
+font-weight: bold;}
+table td {
+    border: 1px solid rgb(0, 0, 0);
+    padding: 1em;
+    text-align: center;
+  }
+
+h1 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+h2 {
+    color: #368;
+    font-size: 24px;
+    text-align: center;
+}
+
+.carousel {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 20px;
+   position:fixed;
+   width:60%;
+ }
+
+
+div div div div img, .intro-landpage { 
+    width: 80%;
+    margin-top: 20px;
+    text-align: center;
+    font-size: large; 
+    font-weight: bold;
+}
+
+
+div div div div img {
+    margin-left: 30%;
+}
+
+div div div div .intro-landpage {
+    margin-right: 30%;
+}
+
+div div div div img, .intro-landpage p {
+    font-size: 16px;
+    font-weight: lighter;
+    padding-top: 10px;
+}
+
+.card.satu {
+    margin-left: 20%;
+}
+
+.card.dua {
+    margin: auto;
+}
+
+
+.card.tiga {
+    margin-right: 20%;
+}
+
+
+.card-body {
+    text-align: start;
+}
+
+
+/* Produk */
+.breadcrumb {
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.isi-produk h2, p {
+    width: 500px;
+    text-align: start;
+    margin-left: 50px;
+    margin-top: 50px;
+    color: black;
+}
+
+
+.isi-produk img {
+    margin-left: 0px;
+    margin-top: -10px;
+}
+
+.isi-produk .card {
+    font-size: small;
+    text-align: start;
+}
+
+/* Tembakau Original */
+
+.detail-produk  {
+    margin-left: 50px;
+    margin-top: 50px;
+    text-align: start;
+}
+
+.detail-produk img {
+    width: 350px;
+}
+
+.detail-produk p {
+    margin-left: 0px;
+    width: 400px;
+}
+
+.detail-produk .row.paket {
+    width: 400px;
+}
+
+.detail-produk .btn.btn-primary {
+    margin-top: 40px;
+}
+
+.center {
+align-items: flex-start; 
+margin-left: 0px;    
+    }
+
+.center .input-jumlah {
+    width: 50px;
+}
+
+
+/* Keranjang */
+
+.keranjang {
+    width: 90%;
+    padding-top: 40px;
+    margin: auto;
+}
+
+
+/* Form registrasi */
+nav form button {
+    margin-right: 20px;
+}
+.square600 {
+    margin: 10px auto;
+    max-width: 600px;
+    padding: 5px 12px 10px 20px;
+    font: 14px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.daftar {
+    margin: 10px auto;
+    max-width: 600px;
+    padding: 5px 12px 10px 20px;
+    font: 14px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+footer {
+    text-align: center;
+    background-color: black;
+    color: white;
+    height: 30px;
+    clear: both;
+    bottom: 0;
+    margin-top: 500px;
+}
